@@ -1,0 +1,9 @@
+# Enable boot from USB
+program_usb_boot_mode=1
+program_usb_timeout=1
+
+#Raspberry PI - increase swap size
+sudo dphys-swapfile swapoff
+sudo nano /etc/dphys-swapfile
+modify the variable CONF_SWAPSIZE : CONF_SWAPSIZE=1024
+sudo /etc/init.d/dphys-swapfile restart
